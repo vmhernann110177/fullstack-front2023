@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepara_tu_Pizza</title>
+
+    <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+
+        <!-- 1.  Aqui ya tengo la libreria 'jquery-3.6.0.min.js' en mi servidor y la llamo -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="divLogo"></div>
+    <div id="alertas">  .</div>
+    <div class="divNombrePagina">Pizzas Full Stack</div>
+
+    <!-- *********** -->
+
+    <form id="checaCampos" action="http://localhost:5000/pizza" method="POST">
+        <!-- Inicia div datos del cliente -->
+        <div  class="divFondoDatos_del_cliente">    
+            <H2>Datos del cliente:</H2>
+        
+            <div class="divElementosInLineBlock">
+                <label for="p1" id="lblp1" >Danos tu Nombre:</label>
+                <input type="text" id="p1" name="p1" title="Pon tu nombre">
+            </div> 
+            <div class="divTodosBlock">
+                <label for="p2" id="lblp2" >Danos tus Apellidos  :</label>
+                <input type="text" id="p2" name="p2" title="Pon tu Apellido"> 
+            </div> 
+            <div class="divTodosBlock">
+                <label for="p3">Fecha de nacimiento:</label>
+                <input type="text" id="p3" name="p3" title="Danos tu Fecha de Nacimiento">
+            </div> 
+            <div class="divTodosBlock">
+                <label for="p4">Número de teléfono :</label>
+                <input type="text" id="p4" name="p4" title="Danos tu número telefónico">
+            </div> 
+            <div class="divTodosBlock">
+                <label for="p5"> Dirección  postal : . . .</label>
+                <textarea id="p5" name="p5" rows="10" cols="42" title="Pon tu dirección postal"></textarea>
+            </div>
+        </div>
+        <!-- fin div datos del cliente -->
+        
+        <!-- Inicia div datos del pedido -->
+        <div class="divFondoDatos_del_pedido">
+            <div>
+                <H2>Datos del pedido:</H2>
+            </div>
+            <div>
+                <label for="p6">Seleccione el tamaño de la pizza </label>
+                <select id="p6" name="p6" title="¿Pequeña?, ¿Mediana?, ¿Grande?, ¿Extra grande?">
+                    <option value="" disabled selected>seleccione una opción</option>
+                    <option id="pequeña">Pequeña</option>
+                    <option id="mediana">mediana</option>
+                    <option id="grande" >grande</option>
+                    <option id="XXL" >¡Extra grande XXL!</option>
+                </select>
+                <span id="resultado_tamano"></span>
+                    <label id="lblDisponibilidad"></label>
+            </div>
+
+            <H4>Ingredientes deseados:</H4>
+                <div>
+                <label for="p7">Jamón York.</label>
+                <input type="checkbox" id="p7" name="p7" />
+                </div>
+                <div>
+                <label for="p8">Cahampiñones</label>
+                <input type="checkbox" id="p8" name="p8" />
+                </div>
+                <div>
+                <label for="p9">Peperoni</label>
+                <input type="checkbox" id="p9" name="p9" />
+                </div>
+                <div>
+                <label for="p10">Aceitunas</label>
+                <input type="checkbox" id="p10" name="p10" />
+                </div>
+                <div>
+                <label for="p11">Extra Queso</label>
+                <input type="checkbox" id="p11" name="p11" />
+                </div>
+        </div>
+            <!-- Inicia div datos del pedido -->
+
+        <button type="reset" title="Corregir datos">Limpiar y cambiar pedido</button>
+        <button type="Submit" title="La quiero">Enviar</button>
+
+    </form>
+
+</body>
+</html>
+
+<!-- 2.  Aqui llamo a la libreria Jquery para ESTE formulario-->
+<script src="js/formulario_jquery.js"></script>
